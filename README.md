@@ -1,4 +1,4 @@
-# Electron Neutrino Idetification Module
+# Electron Neutrino Classification Module
 
 This `I3Module` returns two BDT classifier scores:
 * **NC Classifier (`BDT_models/nue_nc_classifier`):** A smaller score represents neutral current events, while a larger score represents charged current electron neutrino events.
