@@ -29,7 +29,7 @@ BDT score **>= 0.4** = charged current electron neutrinos
 
 BDT score **< 0.4** = neutral current events
 
-**NuMu Classifier:**
+**NuMu Classifier score:**
 
 BDT score **>= 0.5** = charged current electron neutrinos
 
