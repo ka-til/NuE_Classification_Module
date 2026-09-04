@@ -20,3 +20,13 @@ The module assumes that vertex reconstruction has been performed. If this is not
 `extract_var.py` adds necessary variables to the frame. This is implemented in the full `nue_classification_module.py`, but you can also do an independent implementation.
 
 `apply_BDT_model_to_i3.py` is implemented in `nue_classification_module.py`, but run it as an independent module to get the BDT score. If going for an independent implementation, run `extract_var.py` first.
+
+**Classification Scores for selecting NuEs**
+
+**NC Classifier score:** 
+BDT score **>= 0.4** = charged current electron neutrinos 
+BDT score **< 0.4** = neutral current events
+
+**NuMu Classifier**
+BDT score **>= 0.5** = charged current electron neutrinos
+BDT score **< 0.5** = charged current muon neutrinos
