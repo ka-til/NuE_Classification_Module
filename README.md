@@ -24,11 +24,13 @@ The module assumes that vertex reconstruction has been performed. If this is not
 **Classification Scores for selecting NuEs**
 
 **NC Classifier score:** 
+
 BDT score **>= 0.4** = charged current electron neutrinos 
 
 BDT score **< 0.4** = neutral current events
 
-**NuMu Classifier**
+**NuMu Classifier:**
+
 BDT score **>= 0.5** = charged current electron neutrinos
 
 BDT score **< 0.5** = charged current muon neutrinos
