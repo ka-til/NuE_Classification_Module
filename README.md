@@ -34,3 +34,5 @@ BDT score **< 0.4** = neutral current events
 BDT score **>= 0.5** = charged current electron neutrinos
 
 BDT score **< 0.5** = charged current muon neutrinos
+
+**Masters Thesis:** Complete analysis and the cut selection criteria are available [here](https://ualberta.scholaris.ca/items/ecccd139-bd30-4955-90a6-6c3a96962a35)
