@@ -56,4 +56,6 @@ class NuEClassificationModule(icetray.I3ConditionalModule):
 
         apply_BDT_model_to_i3.bdt_score(frame)
 
+        apply_BDT_model_to_i3.set_nue_particle_id(frame)
+
         self.PushFrame(frame)
