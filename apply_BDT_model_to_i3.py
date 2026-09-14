@@ -55,6 +55,27 @@ def bdt_score(frame):
     #frame['NuE_BDT_classifier_score'] = dataclasses.I3Double(score[0])
     frame['NuE_NC_BDT_classifier_score'] = dataclasses.I3Double(score_nc[0])
     frame['NuE_NuMu_BDT_classifier_score'] = dataclasses.I3Double(score_numu[0])
+
+
+def set_nue_particle_id(frame):
+    #return if the key is missing from the frame
+    if "NuE_NuMu_BDT_classifier_score" not in frame:
+        return
+
+    score = frame["NuE_NuMu_BDT_classifier_score"].value
+
+    #check for NaN
+    if np.isnan(score):
+        frame["NuE_classifier_particle_id"] = dataclasses.I3Double(float("nan"))
+        return
+
+    #classification logic
+    if score >= 0.7:
+        frame["NuE_classifier_particle_id"] = dataclasses.I3Double(1)
+    elif score <= 0.3:
+        frame["NuE_classifier_particle_id"] = dataclasses.I3Double(0)
+    else:
+        frame["NuE_classifier_particle_id"] = dataclasses.I3Double(0.5)
     
 def create_dataset(infile, outfile):
 
