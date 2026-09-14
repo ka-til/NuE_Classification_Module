@@ -1,4 +1,4 @@
-# Electron Neutrino Idetification Module
+# Electron Neutrino Classification Module
 
 This `I3Module` returns two BDT classifier scores:
 * **NC Classifier (`BDT_models/nue_nc_classifier`):** A smaller score represents neutral current events, while a larger score represents charged current electron neutrino events.
@@ -20,3 +20,20 @@ The module assumes that vertex reconstruction has been performed. If this is not
 `extract_var.py` adds necessary variables to the frame. This is implemented in the full `nue_classification_module.py`, but you can also do an independent implementation.
 
 `apply_BDT_model_to_i3.py` is implemented in `nue_classification_module.py`, but run it as an independent module to get the BDT score. If going for an independent implementation, run `extract_var.py` first.
+
+**Classification Scores for selecting NuEs**
+
+**NC Classifier score:** 
+
+BDT score **>= 0.4** = charged current electron neutrinos 
+
+BDT score **< 0.4** = neutral current events
+
+**NuMu Classifier score:**
+
+BDT score **>= 0.7** = charged current electron neutrinos
+
+BDT score **<= 0.4** = charged current muon neutrinos
+
+**Masters Thesis:** Complete analysis and the cut selection criteria are available [here](https://ualberta.scholaris.ca/items/ecccd139-bd30-4955-90a6-6c3a96962a35)
+
